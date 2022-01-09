@@ -1,7 +1,6 @@
-export const montoToStr = (num) => {
-    return num > 12 || num < 1
-        ? null
-        : 'январь,февраль,март,апрель,май,июнь,июль,август,сентябрь,октябрь,ноябрь,декабрь'.split(',')[
-        num - 1
-            ];
+
+export const dateFormat = (data) => {
+    const parseDate = data
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return  parseDate.toLocaleDateString("ru-RU", options).split("г.")[0]
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import {montoToStr} from "../../utils";
 
 class ProfileClass extends React.Component {
 
@@ -9,7 +8,7 @@ class ProfileClass extends React.Component {
                   <p>
                       Привет <b>{this.props.name}!</b>
                       <br/>
-                      Дата регистрации: {this.props.registredAt.getDate()} {montoToStr(this.props.registredAt.getMonth())} {this.props.registredAt.getFullYear()}
+                      Дата регистрации: {this.props.registredAt}
                   </p>
               </div>
           )
