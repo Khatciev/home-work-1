@@ -6,7 +6,7 @@ class ProfileClass extends React.Component {
           return (
               <div className="profile">
                   <p>
-                      Привет <b>{this.props.name}!</b>
+                      Привет <b>{this.props.name.split(" ")[0]}!</b>
                       <br/>
                       Дата регистрации: {this.props.registredAt}
                   </p>
