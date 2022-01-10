@@ -15,7 +15,6 @@ const Form = () => {
           password = ""
       }
     }
-
     const handleChange = (e) => {
         if (e.target.name === "email") {
             email = e.target.value;
