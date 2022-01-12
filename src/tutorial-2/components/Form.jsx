@@ -6,7 +6,7 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-      if(!email || !password || /^\s*$/.test(email) || /^\s*$/.test(password)) {
+        if (!email.trim() || !password.trim())  {
           alert("Поле не может быть пустым")
       }    else {
          console.log({email, password})
