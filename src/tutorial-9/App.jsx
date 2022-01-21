@@ -3,16 +3,14 @@ import React, { useState } from "react";
 const App = () => {
   const [users, setUsers] = useState([]);
   const getUsers = async () => {
-    try {
-      const response = await fetch(
-        "https://5c3755177820ff0014d92711.mockapi.io/users"
-      );
-      const json = await response.json();
-      setUsers(json);
-      console.log(users);
-    } catch (e) {
-      console.log(e);
+    const response = await fetch(
+      "https://5c3755177820ff0014d92711.mockapi.io/users"
+    );
+    if (!response.ok) {
+      throw Error("Произошла ошибка!");
     }
+    const json = await response.json();
+    setUsers(json);
   };
   return (
     <div>
